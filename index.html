@@ -13,9 +13,9 @@
       // Set up variables in an array with values as "strings".
 
       const choices = [
-        "Rock",
-        "Paper",
-        "Scissors"
+        "rock",
+        "paper",
+        "scissors"
       ];
 
       // Create a function that will return a random string from array.
@@ -26,11 +26,46 @@
 
       // Define parameters playerSelection and computerSelection
       // Ensure that playerSelection returns lower case every time to avoid errors later
+      // console.log playerSelection and computerSelection to follow along with the game
 
       const playerSelection = prompt("Choose Rock, Paper, or Scissors").toLowerCase();
       const computerSelection = getComputerChoice();
+      console.log(playerSelection);
+      console.log(computerSelection);
 
       // Create a fuction to play a round of Rock, Paper, Scissors
+      // Insert a conditional statement to determine winner
+
+      function playRound (playerSelection, computerSelection){
+        if (playerSelection === "rock" && computerSelection === "paper"){
+          return "You lose. Paper beats rock";
+        } else if (playerSelection === "paper" && computerSelection === "scissors"){
+          return "You lose. Scissors beats rock";
+        } else if (playerSelection === "scissors" && computerSelection === "rock"){
+          return "You lose. Rock beats scissors"
+        } else if (playerSelection === "rock" && computerSelection === "rock") {
+          return "It's a draw!";
+        } else if (playerSelection === "paper" && computerSelection === "paper") {
+          return "It's a draw!"; 
+        } else if (playerSelection === "scissors" && computerSelection === "scissors"){
+          return "It's a draw!";
+        } else if (playerSelection === "rock" && computerSelection === "scissors"){
+          return "You win! Rock beats scissors"
+        } else if (playerSelection === "paper" && computerSelection === "rock"){
+          return "You win! Paper beats rock"
+        } else if (playerSelection === "scissors" && computerSelection === "paper"){
+          return "You win! Scissors beats paper";
+        }
+      }
+
+      let result = playRound(playerSelection, computerSelection);
+      console.log(result);
+
+      
+
+      
+        
+        
 
     
 
