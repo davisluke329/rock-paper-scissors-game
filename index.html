@@ -24,9 +24,13 @@
         return choices[Math.floor(Math.random() * choices.length)];
       };
 
-      console.log(getComputerChoice());
+      // Define parameters playerSelection and computerSelection
+      // Ensure that playerSelection returns lower case every time to avoid errors later
 
-      // Create 
+      const playerSelection = prompt("Choose Rock, Paper, or Scissors").toLowerCase();
+      const computerSelection = getComputerChoice();
+
+      // Create a fuction to play a round of Rock, Paper, Scissors
 
     
 
