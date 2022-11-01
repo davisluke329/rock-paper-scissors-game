@@ -10,6 +10,25 @@
 
     <script>
 
+      // Set up variables in an array with values as "strings".
+
+      const choices = [
+        "Rock",
+        "Paper",
+        "Scissors"
+      ];
+
+      // Create a function that will return a random string from array.
+
+      function getComputerChoice(randomChoice){
+        return randomChoice[Math.floor(Math.random() * randomChoice.length)];
+      };
+
+      getComputerChoice(choices);
+
+      console.log(getComputerChoice(choices));
+
+    
 
 
     </script>
